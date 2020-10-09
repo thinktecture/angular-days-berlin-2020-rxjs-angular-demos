@@ -1,0 +1,4 @@
+<label *ngFor="let filter of state; trackBy: trackByLevel">
+  <input type="checkbox" (change)="toggle(filter)" [checked]="filter.checked" />
+  {{ filter.level | logLevel }} ({{ filter.count }})
+</label>

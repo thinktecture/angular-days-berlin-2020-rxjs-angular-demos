@@ -1,0 +1,7 @@
+<input type="text" [formControl]="search" placeholder="Search">
+
+<ul>
+  <li *ngFor="let option of options$ | async">
+    {{ option.caption }}
+  </li>
+</ul>

@@ -1,0 +1,22 @@
+.level {
+    width: 5rem;
+    display: inline-block;
+    margin: 0 1rem;
+
+    &.info {
+        color: gray;
+    }
+
+    &.warn {
+        color: orange;
+    }
+
+    &.error {
+        color: darkred;
+    }
+    
+    &.critical {
+        color: red;
+    }
+
+}

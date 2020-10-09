@@ -1,0 +1,29 @@
+<h4>Items</h4>
+
+<table>
+  <thead>
+    <tr>
+      <td>Caption</td>
+      <td>Description</td>
+      <td>Favorite</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items$ | async">
+      <td>{{ item.caption }}</td>
+      <td>{{ item.description }}</td>
+      <td>
+        <mat-icon (click)="toggleFavorite(item.id)">{{
+          item.isFavorite ? 'favorite' : 'favorite_border'
+        }}</mat-icon>
+      </td>
+    </tr>
+    <tr>
+      <td>Fake Item</td>
+      <td>This item does not exist</td>
+      <td>
+        <mat-icon (click)="toggleFavorite(100)">favorite_border</mat-icon>
+      </td>
+    </tr>
+  </tbody>
+</table>

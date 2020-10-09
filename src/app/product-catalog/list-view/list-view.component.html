@@ -1,0 +1,3 @@
+<ul>
+  <li *ngFor="let item of items" [class.active]="selectedItem?.id === item.id" (click)="select(item)">{{ item.caption }}</li>
+</ul>

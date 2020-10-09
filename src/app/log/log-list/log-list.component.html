@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let record of records">
+        <span class="time">{{ record.time | date: 'HH:mm:ss' }}</span>
+        <span [ngClass]="['level', record.level | logLevel: 'css']">{{ record.level | logLevel }}</span>
+        <span class="message">{{ record.message }}</span>
+    </li>
+</ul>

@@ -1,0 +1,7 @@
+<h4>Favorites</h4>
+
+<ul>
+  <li *ngFor="let favorite of favorites$ | async">
+    {{ favorite.caption }}
+  </li>
+</ul>

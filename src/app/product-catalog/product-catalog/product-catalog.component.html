@@ -1,0 +1,9 @@
+<h2>Categories</h2>
+<app-list-view [items]="categoryList$ | async" (choose)="selectCategory($event)"></app-list-view>
+
+<h2>Products</h2>
+<app-list-view [items]="filteredProductList$ | async" (choose)="selectProduct($event)"></app-list-view>
+
+<h2>Detail</h2>
+<pre *ngIf="productDetail$ | async as productDetail; else none">{{ productDetail | json }}</pre>
+<ng-template #none>Please select a product!</ng-template>

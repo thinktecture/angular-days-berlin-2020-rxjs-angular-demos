@@ -1,0 +1,12 @@
+<div class="buttons">
+  <button (click)="addCalculation()">+</button>
+  <button
+    *ngFor="let calculation of calculations"
+    (click)="setCalculation(calculation)"
+    [disabled]="calculation.id === activeCalculationId"
+  >
+    {{ calculation.id }}
+  </button>
+</div>
+<app-log-filter [filters]="logFilters$ | async" [formControl]="activatedFilters"></app-log-filter>
+<app-log-list [records]="filteredLog$ | async"></app-log-list>
